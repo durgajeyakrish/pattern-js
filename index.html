@@ -10,37 +10,43 @@
 	<title>form validation</title>
 </head>
 <body>
+	
+<input type="number" id="input">
+
+    <button onclick="clickFun()">Click</button>
+
+    <p id="para"></p>
  
  <script>
-	<!-- let number=5; -->
-		<!-- let string=""; -->
-			<!-- for(i=1;i<=number;i++){ -->
-				<!-- for(j=1;j<=i;j++){ -->
-					<!-- string+=i; -->
-				<!-- } -->
-				<!-- string+="\n"; -->
-			<!-- } -->
-			<!-- console.log(string); -->
+	let number=5;
+		let string="";
+			for(i=1;i<=number;i++){
+				for(j=1;j<=i;j++){
+					string+=i;
+				}
+				string+="\n";
+			}
+			console.log(string);
 			
-		<!-- let number1=5; -->
-		<!-- let string1=""; -->
-		<!-- for(i=5;i>=1;i--){ -->
-			<!-- for(j=1;j<=i;j++){ -->
-				<!-- string1+=i; -->
-			<!-- } -->
-			<!-- string1+="\n" -->
-		<!-- } -->
-		<!-- console.log(string1); -->
+		let number1=5;
+		let string1="";
+		for(i=5;i>=1;i--){
+			for(j=1;j<=i;j++){
+				string1+="*";
+			}
+			string1+="\n"
+		}
+		console.log(string1);
 		
-		<!-- let number2=5; -->
-		<!-- let string2=0; -->
-		<!-- for(i=1;i<=number2;i++){ -->
-			<!-- for(j=1;j<=i;j++){ -->
-				<!-- string2+=j; -->
-			<!-- } -->
-			<!-- string2+="\n"; -->
-		<!-- } -->
-		<!-- console.log(string2) -->
+		let number2=5;
+		let string2=0;
+		for(i=1;i<=number2;i++){
+			for(j=1;j<=i;j++){
+				string2+=j;
+			}
+			string2+="\n";
+		}
+		console.log(string2)
 		
 		let number3=4;
 		let string3=0;
@@ -55,29 +61,40 @@
 		}
 		console.log(string3);
 		
-		<!-- let n=5; -->
-		<!-- let string4=""; -->
-		<!-- for(let i=n;i>=1;i--){ -->
-		    <!-- for(let j=i;j<=n;j++){ -->
-			     <!-- string4+=j -->
-			<!-- } -->
-			<!-- string4+="\n" -->
-			<!-- } -->
-			<!-- console.log(string4); -->
+		let n=5;
+		let string4="";
+		for(let i=n;i>=1;i--){
+		    for(let j=i;j<=n;j++){
+			     string4+=j
+			}
+			string4+="\n"
+			}
+			console.log(string4);
 		
-		<!-- let n1=5; -->
-		<!-- let string5=""; -->
-		<!-- for(let i=n;i>=1;i--){ -->
-		    <!-- for(let j=i;j<=n;j++){ -->
-			     <!-- string5+=i -->
-			<!-- } -->
-			<!-- string5+="\n" -->
-			<!-- } -->
-			<!-- console.log(string5); -->
+		let n1=5;
+		let string5="";
+		for(let i=n;i>=1;i--){
+		    for(let j=i;j<=n;j++){
+			     string5+=i
+			}
+			string5+="\n"
+			}
+			console.log(string5);
 	
-		
-		
-	
+		let input= document.getElementById("input");
+        let p = document.getElementById("para")
+        
+        function clickFun(){
+            let n= input.value;
+
+            for(i=1; i<=n; i++){
+                let num = document.createElement("input")
+                num.setAttribute("type", "checkbox");
+                p.appendChild(num);
+                console.log(i);
+            }
+            input.value="";
+        }
  </script>
 </body>
 </html>
